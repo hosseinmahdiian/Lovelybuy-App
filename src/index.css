@@ -18,18 +18,18 @@
 }
 
 
-/* 
-.delivery::-webkit-scrollbar {
-    width: 50px;
+
+*::-webkit-scrollbar {
+    width: 5px;
     height: 5px;
     border-radius: 20px;
 }
 
-.delivery::-webkit-scrollbar-track {
+*::-webkit-scrollbar-track {
     background: #f5f3f3;
   
   }
   
-  .delivery::-webkit-scrollbar-thumb {
+ *::-webkit-scrollbar-thumb {
     background: #9c9a9a;
-} */
+}

@@ -8,7 +8,7 @@ const Acconut = () => {
   const reducer = useContext(reducerContext);
   const [reduce, dispach] = reducer;
   return (
-    <div className="  h-full bg-white border mx-auto relative ont-IrSans ">
+    <div className="  h-full bg-white  mx-auto relative ont-IrSans ">
       <div className={`${reduce.acconut ? `hidden` : `block`}`}>
         <h1 className="font-IrSana text-red-600 text-center py-4 border-b">
           ورود به فروشگاه
@@ -46,9 +46,9 @@ const Acconut = () => {
           </div>
 
           <button
-            // onClick={() => {
-            //   dispach({ type: "acconut" });
-            // }}
+            onClick={() => {
+              dispach({ type: "acconut" });
+            }}
             className="w-3/4 h-10 bg-blue-500 block mx-auto mt-5 rounded-lg text-white "
           >
             ورود به فروشگاه
