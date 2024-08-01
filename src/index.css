@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@layer base {
+  @font-face {
+    font-family: "IrHoma";
+    src: url("../src/assets/fonts/IRHoma.woff2"), format("woff2");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "IrSans";
+    src: url("../src/assets/fonts/IRSans.woff2"), format("woff2");
+    font-display: swap;
+  }
+}
+
+
+/* 
+.delivery::-webkit-scrollbar {
+    width: 50px;
+    height: 5px;
+    border-radius: 20px;
+}
+
+.delivery::-webkit-scrollbar-track {
+    background: #f5f3f3;
+  
+  }
+  
+  .delivery::-webkit-scrollbar-thumb {
+    background: #9c9a9a;
+} */
