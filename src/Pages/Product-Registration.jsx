@@ -45,11 +45,11 @@ const ProductRegistration = () => {
   console.log(reducer.selected);
   return (
     <Layout>
-      <section className=" max-h-screen  w-full mb-96">
+      <section className=" max-h-screen  w-full ">
         <div
           className={`${
             reducer.page1 ? `block` : `hidden`
-          } mt-[75px] child:mb-5 font-IrSans pt-2`}
+          } mt-24 child:mb-5 font-IrSans pt-2`}
         >
           <div className="relative mx-2  ">
             <input
@@ -59,7 +59,7 @@ const ProductRegistration = () => {
             />
             <label
               htmlFor="name"
-              className="absolute start-1 IrHomama top-4 transition-all ease-linear peer-focus:start-2 peer-focus:-top-3.5 peer-focus:text-sm bg-white px-2"
+              className="absolute start-1 IrHomama top-4 rounded-2xl transition-all ease-linear peer-focus:start-2.5 peer-focus:-top-2 peer-focus:text-sm bg-white px-2"
             >
               نام محصول
             </label>
@@ -72,7 +72,7 @@ const ProductRegistration = () => {
             />
             <label
               htmlFor="code"
-              className="absolute start-1 IrHomama top-4 transition-all ease-linear peer-focus:start-2 peer-focus:-top-3.5 peer-focus:text-sm bg-white px-2"
+              className="absolute start-1 IrHomama top-4 rounded-2xl transition-all ease-linear peer-focus:start-2.5 peer-focus:-top-2 peer-focus:text-sm bg-white px-2"
             >
               بارکد محصول
             </label>
@@ -85,7 +85,7 @@ const ProductRegistration = () => {
             />
             <label
               htmlFor="pay"
-              className="absolute start-1 IrHomama top-4 transition-all ease-linear peer-focus:start-2 peer-focus:-top-3.5 peer-focus:text-sm bg-white px-2"
+              className="absolute start-1 IrHomama top-4 rounded-2xl transition-all ease-linear peer-focus:start-2.5 peer-focus:-top-2 peer-focus:text-sm bg-white px-2"
             >
               قیمت خرید
             </label>
@@ -98,7 +98,7 @@ const ProductRegistration = () => {
             />
             <label
               htmlFor="pay-offer"
-              className="absolute start-1 IrHomama top-4 transition-all ease-linear peer-focus:start-2 peer-focus:-top-3.5 peer-focus:text-sm bg-white px-2"
+              className="absolute start-1 IrHomama top-4 rounded-2xl transition-all ease-linear peer-focus:start-2.5 peer-focus:-top-2 peer-focus:text-sm bg-white px-2"
             >
               قیمت خط خورده
             </label>
@@ -111,7 +111,7 @@ const ProductRegistration = () => {
             />
             <label
               htmlFor="sell"
-              className="absolute start-1 IrHomama top-4 transition-all ease-linear peer-focus:start-2 peer-focus:-top-3.5 peer-focus:text-sm bg-white px-2"
+              className="absolute start-1 IrHomama top-4 rounded-2xl transition-all ease-linear peer-focus:start-2.5 peer-focus:-top-2 peer-focus:text-sm bg-white px-2"
             >
               قیمت فروش
             </label>
@@ -124,7 +124,7 @@ const ProductRegistration = () => {
             />
             <label
               htmlFor="count"
-              className="absolute start-1 IrHomama top-4 transition-all ease-linear peer-focus:start-2 peer-focus:-top-3.5 peer-focus:text-sm bg-white px-2"
+              className="absolute start-1 IrHomama top-4 rounded-2xl transition-all ease-linear peer-focus:start-2.5 peer-focus:-top-2 peer-focus:text-sm bg-white px-2"
             >
               تعداد
             </label>
@@ -137,7 +137,7 @@ const ProductRegistration = () => {
             />
             <label
               htmlFor="exp"
-              className="absolute start-1 IrHomama top-4 transition-all ease-linear peer-focus:start-2 peer-focus:-top-3.5 peer-focus:text-sm bg-white px-2"
+              className="absolute start-1 IrHomama top-4 rounded-2xl transition-all ease-linear peer-focus:start-2.5 peer-focus:-top-2 peer-focus:text-sm bg-white px-2"
             >
               تاریخ انقضا
             </label>
@@ -185,7 +185,7 @@ const ProductRegistration = () => {
               <RiChromeLine className=" text-3xl  mt-4 text-center mr-2 " />
             </label>
           </div>
-          <button className="w-full   h-16 bg-blue-500 block  mt-5 rounded-2xl text-white ">
+          <button className="w-full  h-16 bg-blue-500 block  mt-5 rounded-2xl text-white ">
             ذخیره اطلاعات
           </button>
         </div>
@@ -262,7 +262,7 @@ const ProductRegistration = () => {
         </div>
       </section>
       {/* ---------------------------------------------------------------------------------------------------------------------- */}
-      <div className="h-20 bg-white  bottom-0 w-[400px] fixed">
+      <div className="h-20 bg-white  bottom-0 w-[400px] fixed border-t">
         <div className="flex justify-between    mx-5 items-center h-20   ">
           <span
             className={`${reducer.page2 && `opacity-20`}`}
@@ -285,8 +285,7 @@ const ProductRegistration = () => {
             <MdKeyboardArrowLeft />
           </span>
           <NavLink to={-1} className={`${reducer.page2 && `hidden`}`}>
-              <MdKeyboardArrowLeft />
-            
+            <MdKeyboardArrowLeft />
           </NavLink>
         </div>
       </div>
