@@ -1,0 +1,154 @@
+import React from "react";
+import Layout from "../Layout/Layout";
+import { VscChromeRestore } from "react-icons/vsc";
+import { RiChromeLine } from "react-icons/ri";
+
+const ProductRegistration = () => {
+  return (
+    <Layout>
+      <div className="mt-24 child:mb-3 font-IrSans">
+        <div className="relative mx-2  ">
+          <input
+            className="peer border-2 rounded-2xl outline-gray-300 h-16 w-full "
+            placeholder=" "
+            id="name"
+          />
+          <label
+            htmlFor="name"
+            className="absolute start-1 IrHomama top-4 transition-all ease-linear peer-focus:start-2 peer-focus:-top-3.5 peer-focus:text-sm bg-white px-2"
+          >
+            نام محصول
+          </label>
+        </div>
+
+        <div className="relative mx-2  ">
+          <input
+            className="peer border-2 rounded-2xl outline-gray-300 h-16 w-full "
+            placeholder=" "
+            id="code"
+          />
+          <label
+            htmlFor="code"
+            className="absolute start-1 IrHomama top-4 transition-all ease-linear peer-focus:start-2 peer-focus:-top-3.5 peer-focus:text-sm bg-white px-2"
+          >
+            بارکد محصول
+          </label>
+        </div>
+
+        <div className="relative mx-2  ">
+          <input
+            className="peer border-2 rounded-2xl outline-gray-300 h-16 w-full "
+            placeholder=" "
+            id="pay"
+          />
+          <label
+            htmlFor="pay"
+            className="absolute start-1 IrHomama top-4 transition-all ease-linear peer-focus:start-2 peer-focus:-top-3.5 peer-focus:text-sm bg-white px-2"
+          >
+            قیمت خرید
+          </label>
+        </div>
+        <div className="relative mx-2  ">
+          <input
+            className="peer border-2 rounded-2xl outline-gray-300 h-16 w-full "
+            placeholder=" "
+            id="pay-offer"
+          />
+          <label
+            htmlFor="pay-offer"
+            className="absolute start-1 IrHomama top-4 transition-all ease-linear peer-focus:start-2 peer-focus:-top-3.5 peer-focus:text-sm bg-white px-2"
+          >
+            قیمت خط خورده
+          </label>
+        </div>
+        <div className="relative mx-2  ">
+          <input
+            className="peer border-2 rounded-2xl outline-gray-300 h-16 w-full "
+            placeholder=" "
+            id="sell"
+          />
+          <label
+            htmlFor="sell"
+            className="absolute start-1 IrHomama top-4 transition-all ease-linear peer-focus:start-2 peer-focus:-top-3.5 peer-focus:text-sm bg-white px-2"
+          >
+            قیمت فروش
+          </label>
+        </div>
+        <div className="relative mx-2  ">
+          <input
+            className="peer border-2 rounded-2xl outline-gray-300 h-16 w-full "
+            placeholder=" "
+            id="count"
+          />
+          <label
+            htmlFor="count"
+            className="absolute start-1 IrHomama top-4 transition-all ease-linear peer-focus:start-2 peer-focus:-top-3.5 peer-focus:text-sm bg-white px-2"
+          >
+            تعداد
+          </label>
+        </div>
+        <div className="relative mx-2  ">
+          <input
+            className="peer border-2 rounded-2xl outline-gray-300 h-16 w-full "
+            placeholder=" "
+            id="exp"
+          />
+          <label
+            htmlFor="exp"
+            className="absolute start-1 IrHomama top-4 transition-all ease-linear peer-focus:start-2 peer-focus:-top-3.5 peer-focus:text-sm bg-white px-2"
+          >
+            تاریخ انقضا
+          </label>
+        </div>
+        <div className="relative mx-2 flex justify-between  gap-4 items-center child:cursor-pointer">
+          <input
+            className="peer hidden  border-2 rounded-lg outline-gray-300 h-16 w-full "
+            placeholder=" "
+            id="main-image"
+            type="file"
+          />
+          <label
+            htmlFor="main-image"
+            className="   border rounded-2xl w-10/12 h-16  bg-white py-4 px-2"
+          >
+            تصویر اصلی
+          </label>
+          <label
+            htmlFor="images"
+            className=" inline-block start-1 h-16 w-16 rounded-2xl IrHomama  border  bg-white px-2"
+          >
+            <RiChromeLine className=" text-3xl  mt-4 text-center mr-2 " />
+          </label>
+        </div>
+        <div className="relative mx-2 flex justify-between  gap-4 items-center child:cursor-pointer">
+          <input
+            className={`peer hidden py-4 font-IrSans   border-2 rounded-2xl outline-gray-300 h-16 w-full `}
+            placeholder=" "
+            id="images"
+            type="file"
+            onChange={(e) => {
+              console.log("file", e.target.files);
+            }}
+          />
+          <label
+            htmlFor="main-image"
+            className="   border rounded-2xl w-10/12 h-16  bg-white py-4 px-2"
+          >
+            تصویر دیگر محصول
+          </label>
+          <label
+            htmlFor="images"
+            className=" inline-block start-1 h-16 w-16 rounded-2xl IrHomama  border  bg-white px-2"
+          >
+            <RiChromeLine className=" text-3xl  mt-4 text-center mr-2 " />
+          </label>
+        </div>
+        <button className="w-full  h-16 bg-blue-500 block  mt-5 rounded-2xl text-white ">
+          ذخیره اطلاعات
+        </button>
+      </div>
+    </Layout>
+  );
+};
+
+export default ProductRegistration;

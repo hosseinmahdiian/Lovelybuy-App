@@ -3,6 +3,7 @@ import { IoIosArrowBack } from "react-icons/io";
 import { IoInformationCircleOutline } from "react-icons/io5";
 import logo from "../assets/images/logo.png";
 import { reducerContext } from "../Context/Context";
+import { NavLink } from "react-router-dom";
 
 const Acconut = () => {
   const reducer = useContext(reducerContext);
@@ -45,14 +46,16 @@ const Acconut = () => {
             </label>
           </div>
 
-          <button
-            onClick={() => {
-              dispach({ type: "acconut" });
-            }}
-            className="w-3/4 h-10 bg-blue-500 block mx-auto mt-5 rounded-lg text-white "
-          >
-            ورود به فروشگاه
-          </button>
+          <NavLink to="/Home">
+            <button
+              onClick={() => {
+                dispach({ type: "acconut" });
+              }}
+              className="w-3/4 h-10 bg-blue-500 block mx-auto mt-5 rounded-lg text-white "
+            >
+              ورود به فروشگاه
+            </button>
+          </NavLink>
           <a
             href=""
             className="font-IrSans py-3 mx-auto text-blue-500 block w-fit "

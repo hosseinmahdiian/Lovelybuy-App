@@ -6,8 +6,8 @@ const Layout = ({ children }) => {
   return (
     <div className="w-[400px]">
       <Header />
-      {children}
-      <Conter />
+      <div className=" mt-20">{children}</div>
+       <Conter />
     </div>
   );
 };

@@ -2,7 +2,8 @@ import { useReducer } from "react";
 import Acconut from "./Components/Account";
 import { reducerContext } from "./Context/Context";
 import Home from "./Components/Home";
-
+import { BrowserRouter, Router } from "react-router-dom";
+import Routers from "./Router/Routers";
 
 function App() {
   const FnReducer = (state, action) => {
@@ -59,9 +60,13 @@ function App() {
 
   return (
     <>
-      <reducerContext.Provider value={reducer}>
-        <Home/>
-      </reducerContext.Provider>
+      <div className="w-[400px] max-h-[1000px] min-h-[600px] h-[900px] mx-auto">
+        <reducerContext.Provider value={reducer}>
+          <BrowserRouter>
+            <Routers />
+          </BrowserRouter>
+        </reducerContext.Provider>
+      </div>
     </>
   );
 }

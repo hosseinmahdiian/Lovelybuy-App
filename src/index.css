@@ -17,7 +17,12 @@
   }
 }
 
-
+input[type="file"]::-webkit-file-upload-button{
+  display: none; 
+  /* background-image: url("../src/assets/images/logo.png");
+  background: #000;
+  color: yellowgreen */
+}
 
 *::-webkit-scrollbar {
     width: 5px;
