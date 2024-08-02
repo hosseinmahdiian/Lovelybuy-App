@@ -4,10 +4,10 @@ import Conter from "./Conter";
 
 const Layout = ({ children }) => {
   return (
-    <div className="w-[400px]">
+    <div className="w-[400px] mx-auto  bg-[#F5F5F5] relative">
       <Header />
-      <div className=" mt-20">{children}</div>
-       <Conter />
+      <div className="w-[400px] ">{children}</div>
+      {/* <Conter /> */}
     </div>
   );
 };
