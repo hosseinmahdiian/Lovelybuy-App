@@ -21,7 +21,7 @@ import Advertise from "../Pages/Advertise";
 import DiscountCode from "../Pages/Discount-Code";
 import DataMonitoring from "../Pages/Data-Monitoring";
 import EmployeeManagement from "../Pages/Employee-Management";
-import Dispacher from "../Pages/Dispacher";
+import Dispacher from "../Pages/Dispacher/Dispacher";
 import StoreWarehouse from "../Pages/Store-arehouse";
 import SystemUserRegistration from "../Pages/System-User-Registration";
 import History from "../Pages/History";

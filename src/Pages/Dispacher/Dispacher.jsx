@@ -1,16 +1,21 @@
 import React, { useReducer } from "react";
-import Layout from "../Layout/Layout";
+import Layout from "../../Layout/Layout";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 import { NavLink } from "react-router-dom";
+import Page1 from "./Page1";
+import Page2 from "./Page2";
+import Page3 from "./Page3";
 
 const Dispacher = () => {
-    const init = {
-      page1: true,
-      page2: false,
-      glacery: false,
-      digital: false,
-      selected: "",
-    };
+  const init = {
+    page1: true,
+    page2: false,
+    page3: false,
+    page4: false,
+    glacery: false,
+    digital: false,
+    selected: "",
+  };
   const reducerHandler = (state, action) => {
     switch (action.type) {
       case "page1":
@@ -22,6 +27,16 @@ const Dispacher = () => {
         return {
           ...state,
           page2: !state.page2,
+        };
+      case "page3":
+        return {
+          ...state,
+          page3: !state.page3,
+        };
+      case "page4":
+        return {
+          ...state,
+          page4: !state.page4,
         };
       case "glacery":
         return {
@@ -43,9 +58,17 @@ const Dispacher = () => {
 
   return (
     <Layout>
-      <section className=" max-h-screen  w-full mb-96"></section>
+      <section className=" max-h-screen  w-full mt-24"></section>
+      <div className={`${reducer.page1 ? `bolck` : `hidden`}`}>
+        <Page1 />
+      </div>
+      <div className={`${reducer.page2 ? `bolck` : `hidden`}`}>
+        <Page2 />
+      </div>
+
+      {/* <Page3/> */}
       {/* ---------------------------------------------------------------------------------------------------------------------- */}
-      <div className="h-20 bg-white  -bottom-4 w-[400px] fixed border-t">
+      <div className="h-20 bg-white  bottom-0 w-[400px] fixed border-t">
         <div className="flex justify-between    mx-5 items-center h-20   ">
           <span
             className={`${reducer.page2 && `opacity-20`}`}
@@ -53,6 +76,9 @@ const Dispacher = () => {
               if (!reducer.page2) {
                 dispach({ type: "page1" });
                 dispach({ type: "page2" });
+              } else {
+                 dispach({ type: "page3" });
+                 dispach({ type: "page2" });
               }
             }}
           >
@@ -67,7 +93,7 @@ const Dispacher = () => {
           >
             <MdKeyboardArrowLeft />
           </span>
-          <NavLink to={-1} className={`${reducer.page2 && `hidden`}`}>
+          <NavLink to={-1} className={`${!reducer.page1 && `hidden`}`}>
             <MdKeyboardArrowLeft />
           </NavLink>
         </div>
