@@ -12,9 +12,7 @@ const Dispacher = () => {
     page2: false,
     page3: false,
     page4: false,
-    glacery: false,
-    digital: false,
-    selected: "",
+    
   };
   const reducerHandler = (state, action) => {
     switch (action.type) {
@@ -38,23 +36,14 @@ const Dispacher = () => {
           ...state,
           page4: !state.page4,
         };
-      case "glacery":
-        return {
-          ...state,
-          selected: "glacery",
-        };
-      case "digital":
-        return {
-          ...state,
-          selected: "digital",
-        };
+     
       default:
         break;
     }
   };
 
   const [reducer, dispach] = useReducer(reducerHandler, init);
-  console.log(reducer.selected);
+  // console.log(reducer.selected);
 
   return (
     <Layout>

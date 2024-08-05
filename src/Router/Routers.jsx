@@ -26,6 +26,9 @@ import StoreWarehouse from "../Pages/Store-arehouse";
 import SystemUserRegistration from "../Pages/System-User-Registration";
 import History from "../Pages/History";
 import ProductRegistration from "../Pages/Product-Registration";
+import RegistrationDispacher from "../Pages/Dispacher/Registration-Dispacher";
+import RegisterationDeliveryProducts from "../Pages/Dispacher/Registeration-Delivery-Products";
+import ShowProducts from "../Pages/Dispacher/Show-Products";
 
 const Routers = () => {
   return (
@@ -33,11 +36,9 @@ const Routers = () => {
       <Routes>
         <Route index element={<Acconut />} />
         <Route path="/Home" element={<Home />} />
+        {/* ====================================================================== */}
         <Route path="/Dispacher" element={<Dispacher />} />
-        <Route
-          path="/Product-Registration"
-          element={<ProductRegistration />}
-        />
+        <Route path="/Product-Registration" element={<ProductRegistration />} />
         <Route path="/Bill" element={<Bill />} />
         <Route path="/Edit" element={<Edit />} />
         <Route path="/Charge" element={<Charge />} />
@@ -72,6 +73,17 @@ const Routers = () => {
         <Route path="/Data-Monitoring" element={<DataMonitoring />} />
         <Route path="/Employee-Management" element={<EmployeeManagement />} />
         <Route path="/Store-ٌarehouse" element={<StoreWarehouse />} />
+
+        {/* ==================================================================================== */}
+        <Route path="/Dispacher/:id" element={<RegistrationDispacher />} />
+        <Route
+          path="/Dispacher/:id/RegisterationDeliveryProducts"
+          element={<RegisterationDeliveryProducts />}
+        />
+        <Route
+          path="/Dispacher/:id/ُShowProducts"
+          element={<ShowProducts />}
+        />
       </Routes>
     </>
   );

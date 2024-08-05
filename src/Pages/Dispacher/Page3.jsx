@@ -1,6 +1,7 @@
 import React from "react";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { MdKeyboardArrowLeft } from "react-icons/md";
+import { Link, NavLink } from "react-router-dom";
 
 const Page3 = () => {
   return (
@@ -19,6 +20,7 @@ const Page3 = () => {
         </label>
       </div>
       {/* ================================================================================= */}
+
       <div className="pt-5">
         <h2>نیار به اقدام</h2>
         <div className="  pt-4">
@@ -27,12 +29,15 @@ const Page3 = () => {
             <span>
               <MdKeyboardArrowLeft />
             </span>
-            <span>
-              <BsThreeDotsVertical />
-            </span>
+            <Link to="/Dispacher/1">
+              <span>
+                <BsThreeDotsVertical />
+              </span>
+            </Link>
           </div>
         </div>
       </div>
+
       {/* ================================================================================ */}
 
       <div className="pt-5">
