@@ -66,29 +66,36 @@ const Dispacher = () => {
         <Page2 />
       </div>
 
-      {/* <Page3/> */}
+      <div className={`${reducer.page3 ? `bolck` : `hidden`}`}>
+        <Page3 />
+      </div>
       {/* ---------------------------------------------------------------------------------------------------------------------- */}
       <div className="h-20 bg-white  bottom-0 w-[400px] fixed border-t">
         <div className="flex justify-between    mx-5 items-center h-20   ">
           <span
-            className={`${reducer.page2 && `opacity-20`}`}
+            className={`${reducer.page3 && `opacity-20`}`}
             onClick={() => {
-              if (!reducer.page2) {
+              if (reducer.page1) {
                 dispach({ type: "page1" });
                 dispach({ type: "page2" });
-              } else {
-                 dispach({ type: "page3" });
-                 dispach({ type: "page2" });
-              }
+              } else if ( reducer.page2) {
+                dispach({ type: "page3" });
+                dispach({ type: "page2" });
+              } 
             }}
           >
             <MdKeyboardArrowRight />
           </span>
           <span
-            className={`${!reducer.page2 && `hidden`}`}
+            className={`${reducer.page1 && `hidden`}`}
             onClick={() => {
-              dispach({ type: "page1" });
-              dispach({ type: "page2" });
+               if (reducer.page2) {
+                 dispach({ type: "page1" });
+                 dispach({ type: "page2" });
+               } else if (reducer.page3) {
+                 dispach({ type: "page3" });
+                 dispach({ type: "page2" });
+               } 
             }}
           >
             <MdKeyboardArrowLeft />
