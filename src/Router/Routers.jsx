@@ -5,7 +5,7 @@ import Acconut from "../Components/Account";
 import Bill from "../Pages/Bill";
 import Edit from "../Pages/Edit";
 import Charge from "../Pages/Charge ";
-import BuyerUserRegistration from "../Pages/Buyer-User-Registration";
+import BuyerUserRegistration from "../Pages/Buyer-User-Registration/Buyer-User-Registration";
 import AccessManagement from "../Pages/Access-Management";
 import CreateAccess from "../Pages/Create-Access";
 import UserInformation from "../Pages/User-Information";
@@ -23,7 +23,7 @@ import DataMonitoring from "../Pages/Data-Monitoring";
 import EmployeeManagement from "../Pages/Employee-Management";
 import Dispacher from "../Pages/Dispacher/Dispacher";
 import StoreWarehouse from "../Pages/Store-arehouse";
-import SystemUserRegistration from "../Pages/System-User-Registration";
+import SystemUserRegistration from "../Pages/System-User-Registration/System-User-Registration";
 import History from "../Pages/History";
 import ProductRegistration from "../Pages/Product-Registration";
 import RegistrationDispacher from "../Pages/Dispacher/Registration-Dispacher";
@@ -80,10 +80,7 @@ const Routers = () => {
           path="/Dispacher/:id/RegisterationDeliveryProducts"
           element={<RegisterationDeliveryProducts />}
         />
-        <Route
-          path="/Dispacher/:id/ُShowProducts"
-          element={<ShowProducts />}
-        />
+        <Route path="/Dispacher/:id/ُShowProducts" element={<ShowProducts />} />
       </Routes>
     </>
   );
