@@ -29,6 +29,7 @@ import ProductRegistration from "../Pages/Product-Registration";
 import RegistrationDispacher from "../Pages/Dispacher/Registration-Dispacher";
 import RegisterationDeliveryProducts from "../Pages/Dispacher/Registeration-Delivery-Products";
 import ShowProducts from "../Pages/Dispacher/Show-Products";
+import Processing from "../Pages/processing/Processing";
 
 const Routers = () => {
   return (
@@ -72,7 +73,8 @@ const Routers = () => {
         <Route path="/Discount-Code" element={<DiscountCode />} />
         <Route path="/Data-Monitoring" element={<DataMonitoring />} />
         <Route path="/Employee-Management" element={<EmployeeManagement />} />
-        <Route path="/Store-ٌarehouse" element={<StoreWarehouse />} />
+        <Route path="/Store-arehouse" element={<StoreWarehouse />} />
+        <Route path="/Processing" element={<Processing />} />
 
         {/* ==================================================================================== */}
         <Route path="/Dispacher/:id" element={<RegistrationDispacher />} />

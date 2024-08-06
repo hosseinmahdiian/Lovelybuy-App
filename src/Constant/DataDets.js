@@ -22,5 +22,6 @@ export const MainData = [
   { title: " کدتخفیف ", name: "Discount-Code" },
   { title: " آمار و پایش داده  ", name: "Data-Monitoring" },
   { title: " مدیریت کارکنان ", name: "Employee-Management" },
-  { title: " انبار فروشگاه ", name: "Store-ٌarehouse" },
+  { title: " انبار فروشگاه ", name: "Store-arehouse" },
+  { title: "آماده سازی و پردازش", name: "Processing" },
 ];
