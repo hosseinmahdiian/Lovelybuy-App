@@ -7,7 +7,7 @@ const Page2 = () => {
   return (
     <>
       {/* <div className="gap-4  mb-4"> */}
-      <div className="mx-4 w-full   ">
+      <div className="mx-2  ">
         <h2>نیاز به اقدام</h2>
         <div className="bg-white p-2 rounded-lg mt-3">
           <div className="flex items-center h-16 justify-between w-11/12 mx-auto  my-2 ">
@@ -45,7 +45,7 @@ const Page2 = () => {
           </div>
         </div>
       </div>
-      <div className="mx-4 w-full  my-5 ">
+      <div className="mx-2  my-5 ">
         <h2>انجام شده</h2>
         <div className="bg-white p-2 rounded-lg mt-3">
           <div className="flex items-center h-16 justify-between w-11/12 mx-auto   my-2 ">
