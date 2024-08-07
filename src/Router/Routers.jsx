@@ -3,7 +3,7 @@ import { Route, Router, Routes } from "react-router-dom";
 import Home from "../Components/Home";
 import Acconut from "../Components/Account";
 import Bill from "../Pages/Bill";
-import Edit from "../Pages/Edit";
+import Edit from "../Pages/Edit/Edit";
 import Charge from "../Pages/Charge ";
 import BuyerUserRegistration from "../Pages/Buyer-User-Registration/Buyer-User-Registration";
 import AccessManagement from "../Pages/Access-Management";
@@ -25,11 +25,12 @@ import Dispacher from "../Pages/Dispacher/Dispacher";
 import StoreWarehouse from "../Pages/Store-arehouse";
 import SystemUserRegistration from "../Pages/System-User-Registration/System-User-Registration";
 import History from "../Pages/History";
-import ProductRegistration from "../Pages/Product-Registration";
+import ProductRegistration from "../Pages/Product-Registration/Product-Registration";
 import RegistrationDispacher from "../Pages/Dispacher/Registration-Dispacher";
 import RegisterationDeliveryProducts from "../Pages/Dispacher/Registeration-Delivery-Products";
 import ShowProducts from "../Pages/Dispacher/Show-Products";
 import Processing from "../Pages/processing/Processing";
+import AddProdoct from "../Pages/Edit/AddProdoct";
 
 const Routers = () => {
   return (
@@ -41,7 +42,10 @@ const Routers = () => {
         <Route path="/Dispacher" element={<Dispacher />} />
         <Route path="/Product-Registration" element={<ProductRegistration />} />
         <Route path="/Bill" element={<Bill />} />
+
         <Route path="/Edit" element={<Edit />} />
+        <Route path="/AddProdoct" element={<AddProdoct />} />
+
         <Route path="/Charge" element={<Charge />} />
         <Route
           path="/Buyer-User-Registration"

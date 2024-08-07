@@ -4,7 +4,7 @@ import Conter from "./Conter";
 
 const Layout = ({ children }) => {
   return (
-    <div className="w-[400px] mx-auto  bg-[#F5F5F5] relative">
+    <div className="w-[400px] mx-auto   relative">
       <Header />
       <div className="w-[400px] ">{children}</div>
       {/* <Conter /> */}
