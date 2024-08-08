@@ -8,7 +8,7 @@ const AddProdoct = () => {
   return (
     <>
       <div className="h-screen relative">
-        <div className="   h-[calc(100vh+80px)]   w-full re child:mb-4 mt-8 ">
+        <div className="   h-[calc(100vh-100px)] overflow-y-auto   w-full re child:mb-4 mt-8 ">
           <div className="relative mx-2  ">
             <input
               className="peer border-2 rounded-2xl outline-gray-300 h-16 w-full "
@@ -168,9 +168,9 @@ const AddProdoct = () => {
             ذخیره اطلاعات
           </button>
         </div>
-        <div className=" ">
+        {/* <div className=" "> */}
           <Counter />
-        </div>
+        {/* </div> */}
       </div>
     </>
   );

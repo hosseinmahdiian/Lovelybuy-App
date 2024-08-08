@@ -4,7 +4,7 @@ import Counter from "../../Components/Counter";
 const ChargeProducts = () => {
   return (
     <div className="child:child:mb-5 mt-5 relative h-screen ">
-      <div className="h-[calc(100vh+80px)]">
+      <div className="h-[calc(100vh-100px)] overflow-y-auto">
         <div className="relative mx-2  ">
           <input
             className="peer border-2 rounded-2xl outline-gray-300 h-16 w-full "
@@ -70,7 +70,7 @@ const ChargeProducts = () => {
             تاریخ انقضا
           </label>
         </div>
-        <button className="w-full !mb-[1000000000000000000000px] h-16 bg-blue-500 block  mt-5 rounded-2xl text-white ">
+        <button className="w-full  h-16 bg-blue-500 block  mt-5 rounded-2xl text-white ">
           ذخیره اطلاعات
         </button>
       </div>

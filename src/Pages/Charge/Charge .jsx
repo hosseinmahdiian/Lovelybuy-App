@@ -44,7 +44,7 @@ const Charge = () => {
   };
   return (
     <div className="relative h-screen ">
-      <div className="h-[calc(100vh+80px)] ">
+      <div className="h-[calc(100vh-100px)] overflow-y-auto ">
         <div className="flex items-center mt-3   mx-2 gap-2">
           <div className="relative   w-11/12  ">
             <input
