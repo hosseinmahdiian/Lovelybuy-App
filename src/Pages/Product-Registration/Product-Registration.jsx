@@ -29,10 +29,10 @@ const ProductRegistration = () => {
       </div>
 
       <div className="mx-2">
-        <Link>
+        <Link to="/ChargeProduct/1">
           <Product name="ماست" id={45821645} image={Yogurt} />
         </Link>
-        <NavLink>
+        <NavLink to="/ChargeProduct/2">
           <Product name="ماست" id={45821645} image={Yogurt} />
         </NavLink>
       </div>

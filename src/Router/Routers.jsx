@@ -4,7 +4,7 @@ import Home from "../Components/Home";
 import Acconut from "../Components/Account";
 import Bill from "../Pages/Bill";
 import Edit from "../Pages/Edit/Edit";
-import Charge from "../Pages/Charge ";
+import Charge from "../Pages/Charge/Charge ";
 import BuyerUserRegistration from "../Pages/Buyer-User-Registration/Buyer-User-Registration";
 import AccessManagement from "../Pages/Access-Management";
 import CreateAccess from "../Pages/Create-Access";
@@ -31,6 +31,7 @@ import RegisterationDeliveryProducts from "../Pages/Dispacher/Registeration-Deli
 import ShowProducts from "../Pages/Dispacher/Show-Products";
 import Processing from "../Pages/processing/Processing";
 import AddProdoct from "../Pages/Edit/AddProdoct";
+import ChargeProducts from "../Pages/Charge/ChargeProducts";
 
 const Routers = () => {
   return (
@@ -47,6 +48,7 @@ const Routers = () => {
         <Route path="/AddProdoct" element={<AddProdoct />} />
 
         <Route path="/Charge" element={<Charge />} />
+        <Route path="/ChargeProduct/:id" element={<ChargeProducts />} />
         <Route
           path="/Buyer-User-Registration"
           element={<BuyerUserRegistration />}
