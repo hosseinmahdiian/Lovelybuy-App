@@ -1,100 +1,23 @@
-import React, { useReducer } from 'react';
-import Page1 from './Page1';
-import Page2 from './Page2';
-import Page3 from './Page3';
-import Layout from '../../Layout/Layout';
-import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md';
-import { NavLink } from 'react-router-dom';
+import React, { useReducer } from "react";
+import Location from "./Location";
+import ToDos from "./To-Dos";
+import Printer from "./BillPrinter";
+import Layout from "../../Layout/Layout";
+import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
+import { NavLink } from "react-router-dom";
+import Counter from "../../Components/Counter";
 
 const Processing = () => {
-    const init = {
-      page1: true,
-      page2: false,
-      page3: false,
-      page4: false,
-    };
-    const reducerHandler = (state, action) => {
-      switch (action.type) {
-        case "page1":
-          return {
-            ...state,
-            page1: !state.page1,
-          };
-        case "page2":
-          return {
-            ...state,
-            page2: !state.page2,
-          };
-        case "page3":
-          return {
-            ...state,
-            page3: !state.page3,
-          };
-        case "page4":
-          return {
-            ...state,
-            page4: !state.page4,
-          };
+  return (
+    <>
+      <div className="relative mt-6">
+        <Location />
+        <Location />
 
-        default:
-          break;
-      }
-    };
-
-    const [reducer, dispach] = useReducer(reducerHandler, init);
-    // console.log(reducer.selected);
-
-    return (
-      <Layout>
-        <section className=" max-h-screen  w-full mt-24"></section>
-        <div className={`${reducer.page1 ? `bolck` : `hidden`}`}>
-          <Page1 />
-        </div>
-        <div className={`${reducer.page2 ? `bolck` : `hidden`}`}>
-          <Page2 />
-        </div>
-
-        <div className={`${reducer.page3 ? `bolck` : `hidden`}`}>
-          <Page3 />
-        </div>
-        {/* ---------------------------------------------------------------------------------------------------------------------- */}
-        <div className="h-20 bg-white  bottom-0 w-[400px] fixed border-t">
-          <div className="flex justify-between    mx-5 items-center h-20   ">
-            <span
-              className={`${reducer.page3 && `opacity-20`}`}
-              onClick={() => {
-                if (reducer.page1) {
-                  dispach({ type: "page1" });
-                  dispach({ type: "page2" });
-                } else if (reducer.page2) {
-                  dispach({ type: "page3" });
-                  dispach({ type: "page2" });
-                }
-              }}
-            >
-              <MdKeyboardArrowRight />
-            </span>
-            <span
-              className={`${reducer.page1 && `hidden`}`}
-              onClick={() => {
-                if (reducer.page2) {
-                  dispach({ type: "page1" });
-                  dispach({ type: "page2" });
-                } else if (reducer.page3) {
-                  dispach({ type: "page3" });
-                  dispach({ type: "page2" });
-                }
-              }}
-            >
-              <MdKeyboardArrowLeft />
-            </span>
-            <NavLink to={-1} className={`${!reducer.page1 && `hidden`}`}>
-              <MdKeyboardArrowLeft />
-            </NavLink>
-          </div>
-        </div>
-      </Layout>
-    );
-}
+        <Counter />
+      </div>
+    </>
+  );
+};
 
 export default Processing;

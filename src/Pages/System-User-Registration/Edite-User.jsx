@@ -1,10 +1,11 @@
 import React from "react";
 import Layout from "../../Layout/Layout";
+import Counter from "../../Components/Counter";
 
-const Page2 = () => {
+const EditUsers = () => {
   return (
-    <Layout>
-      <div className="mt-24 child:mb-5">
+    <>
+      <div className="mt-6 child:mb-5">
         <div className="relative mx-2  ">
           <input
             className="peer border-2 rounded-2xl outline-gray-300 h-16 w-full "
@@ -79,8 +80,10 @@ const Page2 = () => {
       <button className="w-full  h-16 bg-blue-500 block  mt-5 rounded-2xl text-white ">
         ذخیره اطلاعات
       </button>
-    </Layout>
+
+      <Counter />
+    </>
   );
 };
 
-export default Page2;
+export default EditUsers;

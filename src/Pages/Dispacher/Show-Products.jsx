@@ -6,6 +6,7 @@ import can from "../../assets/images/can.jpg";
 import yogurt from "../../assets/images/yogurt.png";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 import { NavLink } from "react-router-dom";
+import Counter from "../../Components/Counter";
 
 const BuyProDuctsData = [
   {
@@ -37,13 +38,8 @@ const BuyProDuctsData = [
 const ShowProducts = () => {
   const [buyProducts, setBuyProducts] = useState(BuyProDuctsData);
   return (
-    <div>
-      <div className="flex mx-3 justify-between  h-20 items-center">
-        <h2 className="text-red-600 font-bold font-IrSans">بازگشت</h2>
-        <NavLink to={-1} className={``}>
-          <MdKeyboardArrowLeft />
-        </NavLink>
-      </div>
+    <div className="mt-4">
+      
       <div className="relative bg-white ">
         {BuyProDuctsData.map((item, index) => (
           <div key={index}>
@@ -93,6 +89,7 @@ const ShowProducts = () => {
           </div>
         </div>
       </div>
+      <Counter />
     </div>
   );
 };

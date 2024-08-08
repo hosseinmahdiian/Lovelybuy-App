@@ -154,6 +154,19 @@ const AddProdoct = () => {
               </div>
             </NavLink>
           </div>
+
+          <NavLink
+            to="/Edit/Category/1"
+            className="flex  justify-between items-center w-full  border rounded-2xl  h-16  bg-white  py-4 px-3"
+          >
+            <label htmlFor="main-image" className="   ">
+              دسته بندی
+            </label>
+            <div>
+              <MdArrowBackIos />
+            </div>
+          </NavLink>
+
           <div className="mx-2">
             <select
               name=""
@@ -169,7 +182,7 @@ const AddProdoct = () => {
           </button>
         </div>
         {/* <div className=" "> */}
-          <Counter />
+        <Counter />
         {/* </div> */}
       </div>
     </>

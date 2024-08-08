@@ -2,7 +2,7 @@ import React from "react";
 import { Route, Router, Routes } from "react-router-dom";
 import Home from "../Components/Home";
 import Acconut from "../Components/Account";
-import Bill from "../Pages/Bill";
+import Bill from "../Pages/Bill/Bill";
 import Edit from "../Pages/Edit/Edit";
 import Charge from "../Pages/Charge/Charge ";
 import BuyerUserRegistration from "../Pages/Buyer-User-Registration/Buyer-User-Registration";
@@ -32,6 +32,16 @@ import ShowProducts from "../Pages/Dispacher/Show-Products";
 import Processing from "../Pages/processing/Processing";
 import AddProdoct from "../Pages/Edit/AddProdoct";
 import ChargeProducts from "../Pages/Charge/ChargeProducts";
+import ToDos from "../Pages/processing/To-Dos";
+import Printer from "../Pages/processing/BillPrinter";
+import User from "../Pages/System-User-Registration/User";
+import Users from "../Pages/System-User-Registration/Users";
+import EditUsers from "../Pages/System-User-Registration/Edite-User";
+import SettingUser from "../Pages/System-User-Registration/Setting-User";
+import EditUser from "../Pages/Buyer-User-Registration/Edit-User";
+import Detail from "../Pages/Dispacher/Detail";
+import CategoryPage from "../Pages/Edit/CategoryPage";
+import BillPrenter from "../Pages/processing/BillPrinter";
 
 const Routers = () => {
   return (
@@ -40,23 +50,38 @@ const Routers = () => {
         <Route index element={<Acconut />} />
         <Route path="/Home" element={<Home />} />
         {/* ====================================================================== */}
-        <Route path="/Dispacher" element={<Dispacher />} />
         <Route path="/Product-Registration" element={<ProductRegistration />} />
+        {/* ======================================================================= */}
         <Route path="/Bill" element={<Bill />} />
-
+        <Route path="/Bill/Printer/:id" element={<BillPrenter />} />
+        {/* ============================================================ */}
         <Route path="/Edit" element={<Edit />} />
+        <Route path="/Edit/Category/:id" element={<CategoryPage />} />
         <Route path="/AddProdoct" element={<AddProdoct />} />
-
+        {/* ================================================== */}
         <Route path="/Charge" element={<Charge />} />
         <Route path="/ChargeProduct/:id" element={<ChargeProducts />} />
+        {/* ==================================================================== */}
         <Route
           path="/Buyer-User-Registration"
           element={<BuyerUserRegistration />}
         />
         <Route
+          path="/Buyer-User-Registration/Edit-User/:id"
+          element={<EditUser />}
+        />
+        {/* ==================================================================== */}
+        <Route
           path="/System-User-Registration"
           element={<SystemUserRegistration />}
         />
+        <Route path="/System-User-Registration/:id" element={<EditUsers />} />
+        <Route
+          path="/System-User-Registration/Setting-User/:id"
+          element={<SettingUser />}
+        />
+
+        {/* =================================================================== */}
         <Route path="/Access-Management" element={<AccessManagement />} />
         <Route path="/Create-Access" element={<CreateAccess />} />
         <Route path="/User-Information" element={<UserInformation />} />
@@ -80,15 +105,26 @@ const Routers = () => {
         <Route path="/Data-Monitoring" element={<DataMonitoring />} />
         <Route path="/Employee-Management" element={<EmployeeManagement />} />
         <Route path="/Store-arehouse" element={<StoreWarehouse />} />
+        {/* =================================================================================== */}
         <Route path="/Processing" element={<Processing />} />
-
+        <Route path="/Processing/Printer/:id" element={<Printer />} />
+        <Route path="/Processing/Location/:id" element={<ToDos />} />
         {/* ==================================================================================== */}
-        <Route path="/Dispacher/:id" element={<RegistrationDispacher />} />
+        <Route path="/Dispacher" element={<Dispacher />} />
+
+        <Route path="/Dispacher/Loaction/:id" element={<Detail />} />
+
+        <Route
+          path="/Dispacher/Detil/:id"
+          element={<RegistrationDispacher />}
+        />
+
         <Route
           path="/Dispacher/:id/RegisterationDeliveryProducts"
           element={<RegisterationDeliveryProducts />}
         />
         <Route path="/Dispacher/:id/ُShowProducts" element={<ShowProducts />} />
+        {/* ==================================================================================== */}
       </Routes>
     </>
   );

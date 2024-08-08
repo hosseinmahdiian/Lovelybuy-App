@@ -1,12 +1,17 @@
 import React from "react";
 import Layout from "../../Layout/Layout";
-import { MdKeyboardArrowLeft, MdKeyboardArrowRight, MdOutlineArrowBackIos } from "react-icons/md";
+import {
+  MdKeyboardArrowLeft,
+  MdKeyboardArrowRight,
+  MdOutlineArrowBackIos,
+} from "react-icons/md";
 import { Link, NavLink } from "react-router-dom";
+import Counter from "../../Components/Counter";
 
 const RegistrationDispacher = () => {
   return (
-    <Layout>
-      <div className="mb-28 mt-16 pt-4">
+    <>
+      <div className="mb-28 mt-4 pt-4">
         <Link
           to={`/Dispacher/1/RegisterationDeliveryProducts`}
           className="w-11/12 mx-auto border rounded-lg flex justify-between items-center py-4 pr-3 my-2 bg-white "
@@ -49,8 +54,10 @@ const RegistrationDispacher = () => {
             <MdKeyboardArrowLeft />
           </NavLink>
         </div>
+
+        <Counter />
       </div>
-    </Layout>
+    </>
   );
 };
 

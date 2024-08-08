@@ -1,11 +1,12 @@
 export const MainData = [
   { title: "مامور توضیع", name: "Dispacher" },
   { title: "  ثبت محصول جدید ", name: "Product-Registration" },
-  // { title: "صدور فاکتور", name: "Bill" },
   { title: "ویرایش محصول", name: "Edit" },
   { title: " شارژ کالا", name: "Charge " },
   { title: "ثبت کاربر خریدار", name: "Buyer-User-Registration" },
   { title: " ثبت کاربر سیستم", name: "System-User-Registration" },
+  { title: "آماده سازی و پردازش", name: "Processing" },
+  { title: "صدور فاکتور", name: "Bill" },
   // { title: " مدیریت دسترسی", name: "Access-Management" },
   // { title: " ایجاد دسترسی ", name: "Create-Access" },
   // { title: " اطلاعات کاربران ", name: "User-Information" },
@@ -23,5 +24,4 @@ export const MainData = [
   // { title: " آمار و پایش داده  ", name: "Data-Monitoring" },
   // { title: " مدیریت کارکنان ", name: "Employee-Management" },
   // { title: " انبار فروشگاه ", name: "Store-arehouse" },
-  { title: "آماده سازی و پردازش", name: "Processing" },
 ];

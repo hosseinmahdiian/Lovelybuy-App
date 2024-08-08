@@ -2,6 +2,7 @@ import React from "react";
 import { Outlet } from "react-router-dom";
 import Layout from "../../Layout/Layout";
 import { ReactSketchCanvas } from "react-sketch-canvas";
+import Counter from "../../Components/Counter";
 
 const RegisterationDeliveryProducts = () => {
   return (
@@ -13,6 +14,8 @@ const RegisterationDeliveryProducts = () => {
         strokeColor="#000"
         strokeWidth="4px"
       />
+
+      <Counter />
     </div>
   );
 };
